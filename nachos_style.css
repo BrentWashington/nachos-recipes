@@ -1,0 +1,44 @@
+body {
+    color: white;
+    background-color: #F1C40F;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #FF3900;
+    text-align: center;
+    font-family: cursive;
+    font-variant: small-caps;
+    font-size: 45px;
+}
+
+h2 {
+    font-family: cursive;
+}
+
+h3 {
+    font-family: cursive;
+    color: #FF3900;
+}
+
+h4 {
+    font-family: cursive;
+}
+
+#navigation_menu {
+    text-align: center;
+}
+
+/* Removes bullet points from unordered list */
+ul li {
+    list-style-type: none;
+}
+
+a:hover {
+    color: #6AE805;
+}
+
+/* Removes underline from links */
+a {
+    text-decoration: none;
+}

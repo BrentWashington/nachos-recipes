@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="nachos_style.css" rel="stylesheet">
+    <title>Submit a Recipe</title>
+</head>
+
+<body>
+    Return to <a href="index.html">homepage</a>
+
+    <h1>Submit a Recipe!</h1>
+
+    <form>
+        <fieldset>
+            <legend>Recipe Info</legend>
+            <label for="recipe_name">Name </label> <input type="text" name="recipename" id="recipe_name">
+
+            <!-- Cateogry -->
+            <fieldset>
+                <legend>Category (Choose one)</legend>
+                <ul style="list-style-type: none">
+                    <li>
+                        <input type="radio" name="category" value="standard" id="standard_category" checked>
+                        <label for="standard_category">Standard</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="category" value="vegan" id="vegan_category">
+                        <label for="vegan_category">Vegan</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="category" value="vegetarian" id="vegetarian_category">
+                        <label for="vegetarian_category">Vegetarian</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="category" value="spicy" id="spicy_category">
+                        <label for="spicy_category">Spicy</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <!-- Ingredients -->
+            <fieldset>
+                <legend>Ingredients (Choose as many as necessary)</legend>
+                <ul style="list-style-type: none">
+                    <li>
+                        <input type="checkbox" name="ingredients" value="beef" id="beef">
+                        <label for="beef">Beef</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="ingredients" value="cheese" id="cheese">
+                        <label for="cheese">Cheese</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="ingredients" value="chips" id="chips">
+                        <label for="chips">Chips</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="ingredients" value="jalapneos" id="jalapenos">
+                        <label for="jalapenos">Jalapenos</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="ingredients" value="other" id="other">
+                        <label for="other">Other</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <!-- Steps -->
+            <fieldset>
+                <legend>Steps</legend>
+                <textarea name="steps" rows="5" cols="70" maxlength="600" placeholder="No more than 600 characters long" id="steps"></textarea>
+            </fieldset>
+
+            <!-- Prep Time -->
+            <fieldset>
+                <legend>Average Prep. Time</legend>
+                <select name="prep_time" size="1">
+                    <option>15 min.</option>
+                    <option>30 min.</option>
+                    <option>45 min.</option>
+                </select>
+            </fieldset>
+
+            <!-- Submit & Reset buttons -->
+            <input type="submit" value="Submit">
+            <input type="reset">
+
+        </fieldset>
+    </form>
+</body>
+
+</html>

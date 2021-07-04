@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Recipes</title>
+    <style>
+        h1 {
+            font-size: 15em;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            width: 12em;
+            padding: .50em;
+            border-style: inset;
+            border-radius: 15px;
+            margin: .25em;
+            text-align: center;
+        }
+
+        #thumbnails {
+            margin-bottom: 5em;
+            text-align: center;
+        }
+
+        #nachos_thumbnail {
+            max-width: 30%;
+        }
+
+        #lettuce_thumbnail {
+            max-width: 25%;
+        }
+
+        /* Tablet screen size */
+        @media screen and (min-width: 720px) {
+            h1 {
+                font-size: 30em;
+            }
+
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            nav ul li a {
+                display: inline-block;
+                width: 12em;
+                padding: .50em;
+                border-style: inset;
+                border-radius: 15px;
+                margin: .25em;
+                text-align: center;
+            }
+
+            #thumbnails {
+                margin-bottom: 5em;
+                text-align: center;
+            }
+
+            #nachos_thumbnail {
+                max-width: 30%;
+                margin-bottom: 5em;
+            }
+
+            #lettuce_thumbnail {
+                max-width: 25%;
+                margin-bottom: 5em;
+            }
+
+            #standard_page {
+                margin-left: 10px;
+                margin-right: 10px;
+                display: grid;
+                grid-template-rows: repeat(10, auto);
+                grid-template-columns: 1fr 1fr;
+                grid-auto-flow: row;
+                grid-gap: 5px;
+                align-items: center;
+                justify-items: center;
+                grid-template-areas:
+                    "header header"
+                    "nav nav"
+                    "recipes_nav page_desc"
+                    "rec_1_header rec_1_header"
+                    "rec_1_desc rec_1_desc"
+                    "rec_1_ingredients rec_1_steps"
+                    "rec_2_header rec_2_header"
+                    "rec_2_desc rec_2_desc"
+                    "rec_2_ingredients rec_2_steps"
+                    "footer footer";
+            }
+
+            header {
+                grid-area: header;
+            }
+
+            #navigation_menu {
+                grid-area: nav;
+            }
+
+            #recipe_navigation {
+                grid-area: recipes_nav;
+            }
+
+            #standard_page_desc {
+                grid-area: page_desc;
+            }
+
+            #simple_nachos {
+                grid-area: rec_1_header;
+            }
+
+            #simple_nachos_desc {
+                grid-area: rec_1_desc;
+            }
+
+            #simple_nachos_ingredients {
+                grid-area: rec_1_ingredients;
+            }
+
+            #simple_nachos_steps {
+                grid-area: rec_1_steps;
+            }
+
+            #beef_nachos {
+                grid-area: rec_2_header;
+            }
+
+            #beef_nachos_desc {
+                grid-area: rec_2_desc;
+            }
+
+            #beef_nachos_ingredients {
+                grid-area: rec_2_ingredients;
+            }
+
+            #beef_nachos_steps {
+                grid-area: rec_2_steps;
+            }
+
+            footer {
+                grid-area: footer;
+            }
+
+            /* Large screen size */
+            @media screen and (min-width: 1024px) {
+                h1 {
+                    font-size: 30em;
+                }
+
+                nav ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: center;
+                }
+
+                nav ul li a {
+                    display: inline-block;
+                    width: 12em;
+                    padding: .50em;
+                    border-style: inset;
+                    border-radius: 15px;
+                    margin: .25em;
+                    text-align: center;
+                }
+
+                #thumbnails {
+                    margin-bottom: 5em;
+                    text-align: center;
+                }
+
+                #nachos_thumbnail {
+                    max-width: 30%;
+                    margin-bottom: 5em;
+                }
+
+                #lettuce_thumbnail {
+                    max-width: 25%;
+                    margin-bottom: 5em;
+                }
+
+                #standard_page {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    display: grid;
+                    grid-template-rows: repeat(10, auto);
+                    grid-template-columns: 1fr 1fr;
+                    grid-auto-flow: row;
+                    grid-gap: 5px;
+                    align-items: center;
+                    justify-items: center;
+                    grid-template-areas:
+                        "header header"
+                        "nav nav"
+                        "recipes_nav page_desc"
+                        "rec_1_header rec_1_header"
+                        "rec_1_desc rec_1_desc"
+                        "rec_1_ingredients rec_1_steps"
+                        "rec_2_header rec_2_header"
+                        "rec_2_desc rec_2_desc"
+                        "rec_2_ingredients rec_2_steps"
+                        "footer footer";
+                }
+
+                header {
+                    grid-area: header;
+                }
+
+                #navigation_menu {
+                    grid-area: nav;
+                }
+
+                #recipe_navigation {
+                    grid-area: recipes_nav;
+                }
+
+                #standard_page_desc {
+                    grid-area: page_desc;
+                }
+
+                #simple_nachos {
+                    grid-area: rec_1_header;
+                }
+
+                #simple_nachos_desc {
+                    grid-area: rec_1_desc;
+                }
+
+                #simple_nachos_ingredients {
+                    grid-area: rec_1_ingredients;
+                }
+
+                #simple_nachos_steps {
+                    grid-area: rec_1_steps;
+                }
+
+                #beef_nachos {
+                    grid-area: rec_2_header;
+                }
+
+                #beef_nachos_desc {
+                    grid-area: rec_2_desc;
+                }
+
+                #beef_nachos_ingredients {
+                    grid-area: rec_2_ingredients;
+                }
+
+                #beef_nachos_steps {
+                    grid-area: rec_2_steps;
+                }
+
+                footer {
+                    grid-area: footer;
+                }
+            }
+        }
+
+    </style>
+    <link href="nachos_style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="standard_page">
+        <header>
+            <h1>Standard Recipes</h1>
+        </header>
+        <!-- Navigation menu -->
+        <div id="navigation_menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="vegan.html">Vegan Recipes</a></li>
+                    <li><a href="vegetarian.html">Vegetarian Recipes</a></li>
+                    <li><a href="spicy.html">Spicy Recipes</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <p id="standard_page_desc">
+            Welcome to the standard recipes menu! Here you will find recipes of all kinds with no distinct focus are a particular style of nachos. The ingredients are listed out directly and the instructions are straightforward enough where you will not easily be lost throughtout the cooking process. Nachos can be made in many different ways such as the ones in <a href="https://www.foodnetwork.com/recipes/articles/50-nachos" target="_blank">this list</a>. If you wish to browse a certain variety of recipes, such as the vegan or vegetarian recipes, feel free to look at the other categories above!
+        </p>
+
+        <!-- Recipe navigation table -->
+        <div id="recipe_navigation">
+            <table border="1">
+                <caption>Recipes:</caption>
+                <tr>
+                    <th scope="row" width=100>Name</th>
+                    <td><a href="#simple_nachos">Simple Nachos</a></td>
+                    <td><a href="#beef_nachos">Beef Nachos</a></td>
+                </tr>
+                <tr>
+                    <th scope="row">Prep Time</th>
+                    <td colspan="2" align="center">30 min.</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Simple nachos -->
+        <h3 id="simple_nachos">Simple Nachos</h3>
+        <p id="simple_nachos_desc">
+            Tortilla chips covered with ground beef, black beans, and shredded cheese. This simple yet tasty recipe is perfect for parties
+            or simply relaxing, and it only takes 30 minutes of prepping and cooking. Feel free to branch off and add your own flair during the process!
+        </p>
+        <div id="simple_nachos_ingredients">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>Tortilla chips</li>
+                <li>Ground beef</li>
+                <li>Black beans</li>
+                <li>Cheddar cheese</li>
+            </ul>
+        </div>
+        <div id="simple_nachos_steps">
+            <h4>Steps:</h4>
+            <ol>
+                <li>
+                    Preheat oven at 375 degrees.
+                </li>
+                <li>
+                    Place tortilla chips on the baking sheet. Make sure to spread them out into an even layer. Set aside the sheet for later.
+                </li>
+                <li>
+                    Heat olive oil in a skillet over medium-high heat. Add chopped cheef and cook (making sure they are crumbling) for six minutes.
+                </li>
+                <li>
+                    Stir in the black beans, spoon the beef mixture over the chips, and sprinkle the cheese over the beef layer.
+                </li>
+                <li>
+                    Cook in a preheated oven until the cheese is melted for about seven minutes.
+                </li>
+                <li>
+                    Serve immediately.
+                </li>
+            </ol>
+        </div>
+
+        <!-- Beef nachos -->
+        <h3 id="beef_nachos">Beef Nachos</h3>
+        <p id="beef_nachos_desc">
+            Do you need more beef in your nachos? Do the nachos your favorite restaurant serves not fulfill your high expectations?
+            Have no fear, I have you covered. Behold, the Beef Nachos Supreme! These are the perfect nachos for any occasion. A non-formal
+            one that is. You will have to set aside 15 minutes for preparation and 15 minutes for cooking.
+        </p>
+        <div id="beef_nachos_ingredients">
+            <h4>Ingredients:</h4>
+            <ul>
+                <li>Taco seasoning</li>
+                <li>One pound of ground beef</li>
+                <li>One half of diced yellow onion</li>
+                <li>Two bags of tortilla chips</li>
+                <li>16 ounces of shredded cheese (personal choice)</li>
+                <li>Two sliced green onions</li>
+            </ul>
+        </div>
+        <div id="beef_nachos_steps">
+            <h4>Steps:</h4>
+            <ol>
+                <li>
+                    Preheat oven at 400 degrees.
+                </li>
+                <li>
+                    Cook the ground beef and diced onions over medium-high heat for about eight minutes until fully cooked and drain.
+                </li>
+                <li>
+                    Sprinkle the taco seasoning on the beef in the pan.
+                </li>
+                <li>
+                    Stir in 3/4 cup of water, simmer, reduce heat, and simmer again until the liquid evaporates.
+                </li>
+                <li>
+                    Add chips to two baking sheets and cover each with a layer of ground beef.
+                </li>
+                <li>
+                    Sprinkle shredded cheese on the pans and bake them at 400 degrees for 15 minutes.
+                </li>
+                <li>
+                    Remove the pans from the oven and sprinkle the diced tomatoes and green onions on top.
+                </li>
+                <li>
+                    Serve immediately.
+                </li>
+            </ol>
+        </div>
+
+        <footer>
+            <p>
+                Any questions or suggestions? Feel free to contact me at:
+            </p>
+            <blockquote>
+                <address>
+                    Brent Washington
+                    <br>
+                    <a href="mailto:notafakeemail@email.com">notafakeemail@email.com</a>
+                </address>
+            </blockquote>
+        </footer>
+    </div>
+
+    <div id="thumbnails">
+        <img src="thumbnails/nachos.gif" id="nachos_thumbnail" alt="Bowl of nachos thumbnail">
+        <img src="thumbnails/lettuce.gif" id="lettuce_thumbnail" alt="Head of Lettuce thumbnail">
+    </div>
+</body>
+
+</html>
